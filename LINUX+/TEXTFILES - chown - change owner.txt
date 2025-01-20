@@ -1,0 +1,32 @@
+chown - change owner
+chown <user>.<group> <file> <directory>
+chgrp <groupname> <file>
+
+
+default 
+FILES: rw-rw-rw- (666)
+DIRECTORIES: rwxrwxrwx (777)
+
+umask 
+change change from 
+/etc/profile
+/etc/login.defs
+
+tar
+CREATE
+tar <command options> <filename>.tar.gz <target directory>
+sudo tar -cvzf /tmp/backup.tar.gz /mnt/shared
+
+EXTRACT
+tar <command options> <filename> <target unzip directory> 
+sudo tar xvzf back.tar.gz 
+
+
+CPIO
+cat <file_name> | cpio
+find /path/to/files | cpio -ov > archive.cpio
+
+DD
+dd if=input_file of=output_file
+dd if=device_file of=output_file
+dd if=device_file of=output_file bs=512 count=1

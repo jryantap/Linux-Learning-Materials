@@ -1,0 +1,144 @@
+LINUX+ 
+
+Linux File System Basics
+
+pwd - displays current working directory
+cd  - changes the present working directory 
+--> cd .. 	changes parent directory
+--> cd ../..  	changes two levels
+--> cd / 	changes to the root directory
+
+ls  - display content of a directory
+--> -a display all contents and hidden content
+--> -l displays extended information, owner date, size, permissions.
+--> -R displays all contents of a directory and all of its subdirectories, not files.
+--> -r reverses the sord order
+--> -d display only directories
+--> -s sort files by size.
+--> -X sorts by extensions.
+
+Directories are blue.
+Text files are white.
+Links are cyan.
+Executable files are green.
+Compressed files are red.
+
+Create, Copy, and Move a Linux Directory
+
+mkdir - make a new directory
+--> -p create all directories within the specified path. 
+--> mkdir /home/Fred/work_files creates a directory named work_files within the specified path.
+
+cp - copies directories. 
+--> cp -r /temp /home/user --> copies entire temp to user directory
+
+mv - move files or renames directory
+--> -f without prompt, overwrites a directory that already exist in the destination directory
+--> -i prompts fore overwriting
+--> -n never overwrites files
+---> mv /temp/station ~/doc/ moves station from the  /temp directory to the ~/doc directory.
+---> mv /current /previous renames the directory current to previous
+
+Remove a Linux Directory
+
+rmdir - deletes an EMPTY directory.
+
+rm - removes the directory and file information from the file system
+--> -i prompt before removing
+--> -r removes the entire directories and files within them.
+--> -f eliminates prompt for read-only file and avoid an error if the file doesn't exist. 
+---> rm -r /home/user/* deletes all directories and files in the /home/user directory.
+
+File Management Commands
+
+touch - creates a blank file. 
+cp - copies files 
+--> -f overwrite file
+--> -i prompts before overwriting
+mv - Moves or renames files (and directories). Moving files erases the source file and moves it to the destination.
+rm - Removes a file or directory. Use the -f option to delete with a prompt.
+
+The nano Editor
+
+nano 
+--> A caret (^) in the shortcut means press and hold the Ctrl key.
+
+The vi Editor
+
+vi 
+vi [file_name]
+INSERT key, i, s - 	insert mode
+ESC key - 		enters command mode from edit mode
+z - 			exit without saving
+: - 			enters the command line mode from command mode. 
+w -			saves the current document.
+w [file_name]  -	Name and saves the file. 
+w! [file_name] -	Overwrites the file. 
+q -			Exits vi.  if text was modified, it gives an error
+q! - 			Exits vi without saving. 
+wq - 			Save document and exits vi. 		
+
+
+===========================================================================
+
+DHCP - 			Dynamic Host Configuration protocol (DHCP) centralizes IP address assignment management by allowing a server (such as a Linux server) to dynamically assign IP addresses to clients.  >>$ sudo apt install isc-dhcp-server
+SNMP - 			The Simple Network Management Protocol (SNMP) is designed for managing complex networks, and is used to communicate with and monitor network devices, servers, and more by means of the IP protocol. >>yum -y install net-snmp net-snmp-utils
+Load balancer -		increases response time to servers by distributing workload 
+Clustering - 		make two or more servers work as one. 
+
+===========================================================================
+THE LINUX SHELL
+
+A Linux shell is a program that traditionally provides the text user interface (TUI) for Linux
+$PATH environment variable - 		A shell environment variable that contains the set of directories that are searched when you type an executable file at the shell prompt.
+
+Linux Shell Types
+
+echo $SHELL - 				returns the default or preferred shell. 
+echo $0	- 				returns the current shell type. $0 hold the name of the script consistent with shell type. 
+/etc/passwd				where user's preferred shell is normally set.
+
+Linux Shell Command Facts
+
+--> If the current working directory is the home directory (the default directory when the userfirst logs in), the tilde symbol (
+~) is displayed instead.
+A character that indicates the type of user:
+--> The # character typically indicates that the current user is the root user.
+--> The $ character typically indicates that the current user is a normal user
+$PATH Linux Shell Environment Variable 	
+--> The shell does not look (by default) in the current working directory for the executable file.
+--> To see the list of directories, type echo $PATH at the shell prompt.
+--> To add a directory to a path, type PATH=$PATH:[directory_path] and then type export PATH .
+
+Running an exec file.
+--> file is in the $PATH - 		type the file name at the shell prompt. 
+--> file is in the current 
+	working directory
+	but not in the $PATH		type ./ followed by filename. 
+--> neither 				type the full path to the exe file. 
+
+Common Linux Shell Commands
+
+whoami - 		display current username.
+uname - 		prints system information.
+			-a all system information.
+			-o prints operating system. 
+			-p print the processor's architecture type. 
+su - 			switches uses at the shell. 
+			su -l [username], switch user + new login shell. 
+			su [username], switches users in the current shell.
+			su - [username], switches user and load that user's environment variables.
+			su - , switches to the root user (Linux super user) and load root user's environment variables.
+			su , switches to root user but does not load the root user's environment variables.
+exit 			exits the current shell or go back to the original user
+exec 			executes an executable file
+chsh 			changes the default shell
+			-s changes to a different installed shell. The command prompts for a password.
+			-l lists all installed shells.
+			For example,chsh -s /bin/ksh [username] changes the default shell for the user to the Korn shell if it is installed on the computer.	
+
+			
+
+
+
+

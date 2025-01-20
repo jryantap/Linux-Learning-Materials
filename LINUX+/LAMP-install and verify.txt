@@ -1,0 +1,26 @@
+LAMP Stack (Linux, Apache, MySQL & PHP/Python) 
+on Microsoft IIS 
+
+sudo rpm -i httpd 
+sudo yum install httpd 
+……
+……
+systemctl status httpd 
+systemctl stop httpd
+systemctl start httpd 182.122.63.56.cali.com  
+
+sudo yum install mysql
+……
+……
+systemctl status mysql 
+systemctl stop mysql
+systemctl start mysql  
+
+sudo yum install php
+……
+……
+systemctl status php 
+systemctl stop php
+systemctl start php  
+
+
