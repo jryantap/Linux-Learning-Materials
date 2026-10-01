@@ -19,3 +19,11 @@ ss tuln # -t — show TCP, -u — show UDP, -l — show listening services, -n �
 # 3. dns is listening on port: 53 on any interface (bercause of 0.0.0.0)
 #
 # so tcp  LISTEN  0.0.0.0:443 - means it is listening on HTTPS on any interface
+
+# TCP = reliable delivery, verifies data arrives correctly and in order. 
+# UDP = faster, fewer checks, does not confirm if data arrived correcty and in order. 
+
+ss tuln 
+Netid  State        Local Address:Port   Peer Address:Port
+tcp    ESTAB        192.168.1.25:52140   142.250.80.14:443
+udp    UNCONN       192.168.1.25:45672   8.8.8.8:53
