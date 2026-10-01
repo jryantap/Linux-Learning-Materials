@@ -9,10 +9,11 @@
 ss tuln # -t — show TCP, -u — show UDP, -l — show listening services, -n — show numerical ports instead of service names
 
 #OutPut:
-#Netid  State   Local Address:Port
-#tcp    LISTEN  0.0.0.0:22
-#tcp    LISTEN  127.0.0.1:631
-#udp    UNCONN  0.0.0.0:53
+Netid  State   Local Address:Port
+tcp    LISTEN  0.0.0.0:22
+tcp    LISTEN  127.0.0.1:631
+udp    UNCONN  0.0.0.0:53
+
 # this means 
 # 1. ssh is listening on port: 22 
 # 2. a service is listen on port: 631 on a local computer
