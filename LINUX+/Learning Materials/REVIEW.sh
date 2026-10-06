@@ -28,3 +28,16 @@ ss tuln
 Netid  State        Local Address:Port   Peer Address:Port
 tcp    ESTAB        192.168.1.25:52140   142.250.80.14:443
 udp    UNCONN       192.168.1.25:45672   8.8.8.8:53
+
+# LESSON 7
+# testing a specific port with nc - netcat - test whether a TCP port access connections
+nc -vz example.com 443
+# v verbose output
+# z test the port without sending application data
+# Output: 
+# </bash> Connection to example.com 443 port [tcp/https] succeeded!
+# Confirms the following;  
+# 1. DNS resolved the hostname.
+# 2, The server was reachable.
+# 3. A TCP connection to port 443 succeeded.
+
