@@ -18,7 +18,6 @@ udp    UNCONN  0.0.0.0:53
 # 1. ssh is listening on port: 22 
 # 2. a service is listen on port: 631 on a local computer
 # 3. dns is listening on port: 53 on any interface (bercause of 0.0.0.0)
-#
 # so tcp  LISTEN  0.0.0.0:443 - means it is listening on HTTPS on any interface
 
 # TCP = reliable delivery, verifies data arrives correctly and in order. 
