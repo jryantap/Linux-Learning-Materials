@@ -40,3 +40,15 @@ nc -vz example.com 443
 # 2, The server was reachable.
 # 3. A TCP connection to port 443 succeeded.
 
+# LESSON 8
+ip neigh
+192.168.1.1 dev enp2s0 lladdr 00:11:22:33:44:55 REACHABLE
+192.168.1.50 dev enp2s0 lladdr aa:bb:cc:dd:ee:ff STALE
+192.168.1.80 dev enp2s0 FAILED
+
+#192.168.1.1 — neighboring device’s IP address
+#enp2s0 — local interface used to reach it
+#lladdr — link-layer address, usually the MAC address
+#REACHABLE — recently confirmed reachable
+#STALE — entry exists but has not been confirmed recently
+#FAILED — Linux could not discover or reach the neighbor
