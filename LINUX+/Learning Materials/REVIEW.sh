@@ -52,3 +52,12 @@ ip neigh
 #REACHABLE — recently confirmed reachable
 #STALE — entry exists but has not been confirmed recently
 #FAILED — Linux could not discover or reach the neighbor
+
+#Lesson 9
+ip route
+ip route get 8.8.8.8
+#output: 8.8.8.8 via 192.168.1.1 dev enp2s0 src 192.168.1.25
+#8.8.8.8 — destination
+#via 192.168.1.1 — next-hop gateway
+#dev enp2s0 — outgoing interface
+#src 192.168.1.25 — source IP Linux will use
