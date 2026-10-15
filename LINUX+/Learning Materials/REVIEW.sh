@@ -77,3 +77,10 @@ Gateway    → ip route
 DNS        → resolvectl status
 nmcli device show
 
+#Is DNS the first problem you should troubleshoot?
+IP address: 169.254.55.20
+Gateway:    none
+DNS:        none
+# No.  Computer did not get a DHCP configuration.  Troubleshoot local connect and DHCP access first.
+# Since there's no valid Gateway and DNS address.  
+
