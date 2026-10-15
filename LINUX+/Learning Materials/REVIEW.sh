@@ -61,3 +61,19 @@ ip route get 8.8.8.8
 #via 192.168.1.1 — next-hop gateway
 #dev enp2s0 — outgoing interface
 #src 192.168.1.25 — source IP Linux will use
+
+#Lesson 10
+Network address:    192.168.1.0
+Usable addresses:   192.168.1.1 – 192.168.1.254
+Broadcast address:  192.168.1.255
+
+#Lesson 11
+ip -4 addr
+ip route
+resolvectl status
+
+IP address → ip -4 addr
+Gateway    → ip route
+DNS        → resolvectl status
+nmcli device show
+
