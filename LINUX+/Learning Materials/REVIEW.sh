@@ -84,3 +84,12 @@ DNS:        none
 # No.  Computer did not get a DHCP configuration.  Troubleshoot local connect and DHCP access first.
 # Since there's no valid Gateway and DNS address.  
 
+# lesson
+</bash> 
+dig example.com A
+# ;; ANSWER SECTION:
+# example.com.    3600    IN    A    93.184.216.34
+
+# vendor.example.    300    IN    A    203.0.113.25
+# What type of record is it, what IP address was returned, and how long may it be cached?
+# It is an A record pointing to IPv4 address 203.0.113.25. Its TTL is 300 seconds, so it may be cached for up to five minutes.
