@@ -30,3 +30,44 @@ DD
 dd if=input_file of=output_file
 dd if=device_file of=output_file
 dd if=device_file of=output_file bs=512 count=1
+
+#############################################
+> — Save Output to a File
+>> — Append Output
+
+Syntax	Meaning
+>	Redirect stdout to a file (overwrite)
+>>	Append stdout to a file
+2>	Redirect stderr to a file
+2>&1	Send stderr to stdout's destination
+&>	Redirect both stdout and stderr to a file (Bash)
+/dev/null	Discard output
+
+
+
+| Exit code | Meaning ||---|---|
+| `0` | Command completed successfully |
+| `1` | General failure or false condition |
+| `2` or higher | Other errors, depending on the command |
+
+| Standard output (stdout) | `1` | Normal command results |
+| Standard error (stderr) | `2` | Error messages |
+
+| Command | Purpose ||---|---|
+| `command > file.txt` | Save normal output, overwriting the file |
+| `command >> file.txt` | Append normal output |
+| `command 2> errors.txt` | Save error messages |
+| `command 2>> errors.txt` | Append error messages |
+| `command > file.txt 2>&1` | Save normal output and errors together |
+
+#############################################
+
+hmod	Owner	Group	Others
+777	    rwx	    rwx	    rwx
+755	    rwx	    r-x	    r-x
+700	    rwx	    ---	    ---
+644	    rw-	    r--	    r--
+600	    rw-	    ---	    ---
+
+#############################################
+
