@@ -93,3 +93,4 @@ dig example.com A
 # vendor.example.    300    IN    A    203.0.113.25
 # What type of record is it, what IP address was returned, and how long may it be cached?
 # It is an A record pointing to IPv4 address 203.0.113.25. Its TTL is 300 seconds, so it may be cached for up to five minutes.
+
